@@ -1,5 +1,9 @@
 # Repository Description for Docker Image with OpenConnect
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Docker Image](https://img.shields.io/docker/v/achevsmisle/openconnect-mikrotik-pi?label=Docker%20Hub)](https://hub.docker.com/r/achevsmisle/openconnect-mikrotik-pi)
+[![Docker Pulls](https://img.shields.io/docker/pulls/achevsmisle/openconnect-mikrotik-pi)](https://hub.docker.com/r/achevsmisle/openconnect-mikrotik-pi)
+
 This Docker image is designed to run `openconnect` on Mikrotik devices, single-board computers (e.g., Raspberry Pi), and includes a build for the `amd64` architecture. The entrypoint script configures a VPN connection using OpenConnect based on environment variables provided at runtime. Below is a table listing all expected environment variables with their descriptions, default values, notes, and whether they are required.
 
 Functionality is tested against `1.6` or `latest` tag.
