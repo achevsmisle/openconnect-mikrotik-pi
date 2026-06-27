@@ -1,4 +1,4 @@
-# Repository Description for Docker Image with OpenConnect
+# Docker Image with OpenConnect
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Docker Image](https://img.shields.io/docker/v/achevsmisle/openconnect-mikrotik-pi?label=Docker%20Hub)](https://hub.docker.com/r/achevsmisle/openconnect-mikrotik-pi)
