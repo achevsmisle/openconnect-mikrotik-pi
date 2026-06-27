@@ -72,3 +72,21 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+  update-dockerhub-readme:
+    needs: build
+    runs-on: ubuntu-latest
+    if: success() && !contains(github.ref_name, '-')
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Update Docker Hub README
+        uses: peter-evans/dockerhub-description@v4
+        with:
+          username: ${{ env.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: ${{ env.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}
+          readme-filepath: ./README.md
+          short-description: 'Multi-arch OpenConnect client for Mikrotik, Raspberry Pi and amd64'
