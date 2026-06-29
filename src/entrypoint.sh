@@ -97,7 +97,12 @@ ipv6_forwarding_switch() {
     if [ "${OC_DISABLE_IPV6}" = "1" ]; then
         sysctl -w net.ipv6.conf.default.forwarding=0 net.ipv6.conf.all.forwarding=0
     else
-        :
+        cat << 'EOF' > /etc/gai.conf
+precedence ::/0                40
+precedence ::ffff:0:0/96       10
+precedence 2002::/16           30
+precedence ::/96               20
+EOF
     fi
 }
 
