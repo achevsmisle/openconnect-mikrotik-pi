@@ -9,6 +9,7 @@ RUN --mount=type=cache,target=/var/cache/apk \
     addgroup -g 1004 openconnect && \
     adduser -G openconnect -u 1004 -D -H -s /bin/sh openconnect && \
     apk add --no-cache \
+      gcompat \
       iptables-legacy \
       ca-certificates \
       tzdata \
