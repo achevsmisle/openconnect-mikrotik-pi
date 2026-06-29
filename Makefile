@@ -1,6 +1,6 @@
-DOCKER_ID=achevsmisle
+DOCKER_ID?=achevsmisle
 IMAGE_NAME:=openconnect-mikrotik-pi
-IMAGE_VERSION?=1.5
+IMAGE_VERSION?=1.6
 
 .PHONY: install_qemu mikrotik arm64 amd64 full_build
 
